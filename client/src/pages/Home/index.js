@@ -1,15 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import { Container } from './styles';
 import Navbar from '../../components/Navbar';
 import CardRestaurant from '../../components/CardRestaurant';
-import { restaurant } from '../../db';
-import search from '../../img/search.svg'
-
+import search from '../../img/pageUtils/search.svg'
 
 export default function Home() {
-    
-    const cards = document.querySelectorAll('.restaurants .cardRestaurant')
 
+    const [cards, setCards] = useState([]);
+    const [restaurant, setRestaurants] = useState([]);
+
+    const user = JSON.parse(localStorage.getItem('u_tk'));
+
+    useEffect(() => {
+        const cardsRestaurant = document.querySelectorAll('.restaurants .cardRestaurant');
+        setCards(cardsRestaurant);
+
+        axios.get('http://localhost:3001/user/restaurant')
+        .then(res => { setRestaurants(res.data) })
+        .catch(err => { console.log(err.response.data.message) })
+    }, [])
+    
     function filterCards(text) {
         if(text !== ''){
             for(let card of cards){
@@ -39,7 +50,7 @@ export default function Home() {
     
     return (
         <Container>
-            <Navbar name={"Fred"} address={"Av Leopoldinho de Oliveira"}/>
+            <Navbar page={'home'} name={user.name} address={user.address}/>
 
             <main className='content'>
                 <div className='search'>
@@ -55,11 +66,13 @@ export default function Home() {
                                 key={index}
                                 id={element.id}
                                 name={element.name} 
-                                foodType={element.foodType} 
-                                img={element.img}
-                                time={element.time}
+                                phone={element.phone}
+                                address={element.address}
+                                foodType={element.food_type} 
+                                img={element.image}
+                                time={element.delivery_time}
                                 stars={element.stars}
-                                deliveryPrice={element.price}
+                                deliveryPrice={element.delivery_price}
                             />
                         ))
                     }

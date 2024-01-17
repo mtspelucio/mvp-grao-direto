@@ -8,7 +8,7 @@ import { restaurantItems } from '../../db';
 
 export default function Restaurant() {
 
-    const { id, name, foodDescription, imgIcon } = useParams('name');
+    const { id, name, phone, address, imgIcon } = useParams();
 
   return (
     <Container>
@@ -22,7 +22,8 @@ export default function Restaurant() {
 
                 <div className='infoRestaurant'>
                     <p>{ name }</p>
-                    <p>{ foodDescription }</p>
+                    <p>Telefone: { phone }</p>
+                    <p>Endereço: { address }</p>
                 </div>
             </header>
 

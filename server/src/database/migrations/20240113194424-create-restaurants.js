@@ -2,7 +2,7 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('menus', { 
+    return queryInterface.createTable('restaurants', { 
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -13,27 +13,33 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      description: {
+      food_type: {
         type: Sequelize.STRING,
         allowNull: false
       },
-      price: {
+      phone: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      address: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      stars: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      delivery_time: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+      },
+      delivery_price: {
         type: Sequelize.STRING,
         allowNull: false
       },
       image: {
         type: Sequelize.STRING,
         allowNull: false
-      },
-      restaurant_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-          model: 'restaurant',
-          key: 'id',
-        },
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE',
       },
       created_at: {
         type: Sequelize.DATE,
@@ -46,7 +52,7 @@ module.exports = {
     });
   },
 
-  down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('menus');
+  down: (queryInterface) => {
+    return queryInterface.dropTable('restaurants');
   }
 };

@@ -5,9 +5,12 @@ class Restaurant extends Model {
         super.init({
             name: DataTypes.STRING,
             food_type: DataTypes.STRING,
-            stars: DataTypes.FLOAT,
+            phone: DataTypes.STRING,
+            address: DataTypes.STRING,
+            stars: DataTypes.STRING,
             delivery_time: DataTypes.INTEGER,
-            delivery_value: DataTypes.FLOAT,
+            delivery_price: DataTypes.STRING,
+            image: DataTypes.STRING
         }, {
             sequelize
         })

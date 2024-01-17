@@ -9,6 +9,8 @@ module.exports = {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         const isValidEmail = emailRegex.test(email);
         const existUser = await User.findOne({ where: { email } })
+
+        const primaryName = name.split(' ')[0]; 
         
         if(existUser || !isValidEmail) return res.status(400).json({
             user: null, 
@@ -16,15 +18,17 @@ module.exports = {
         });
         
         const passwordHash = await hash(password, 8);
+        const token = Math.random().toString(36).substring(2);
 
-        const user = await User.create({ 
-            name, 
+        await User.create({ 
+            name: primaryName, 
             email, 
             password: passwordHash, 
-            address
+            address,
+            token
         })
 
-        return res.status(201).json(user);
+        return res.status(201).json({ primaryName, email, address, token });
     },
 
     async update(req, res) {
@@ -54,11 +58,40 @@ module.exports = {
                 message: 'Usuário ou senha incorreto!'
             })
             
-            res.status(200).json(user)
+            res.status(200).json({
+                name: user.name,
+                email: user.email,
+                address: user.address,
+                token: user.token
+            })
         } catch (error) {
             return res.status(500).json({
                 user: null, 
-                message: 'Erro no servidor.'
+                message: 'Usuário não encontrado.'
+            })
+        }
+    },
+    
+    async findOneAsToken(req, res) {
+        try {
+            const { token } = req.body;
+            const user = await User.findOne({ where: { token } });
+
+            if (!user) return res.status(404).json({
+                user: null, 
+                message: 'Usuário ou senha incorreto!'
+            })
+            
+            res.status(200).json({
+                name: user.name,
+                email: user.email,
+                address: user.address,
+                token: user.token
+            })
+        } catch (error) {
+            return res.status(500).json({
+                user: null, 
+                message: 'Usuário não encontrado.'
             })
         }
     }

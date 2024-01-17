@@ -2,14 +2,14 @@ import React from 'react';
 import { Container } from './styles';
 import { Link } from 'react-router-dom'
 
-import star from '../../img/star.svg';
-import timer from '../../img/timer.svg';
-import delivery from '../../img/delivery.svg';
+import star from '../../img/pageUtils/star.svg';
+import timer from '../../img/pageUtils/timer.svg';
+import delivery from '../../img/pageUtils/delivery.svg';
 
-export default function CardRestaurant({ name, foodType, stars, time, deliveryPrice, onClick, img, id }) {
+export default function CardRestaurant({ name, phone, address, foodType, stars, time, deliveryPrice, onClick, img, id }) {
 
   return (
-    <Link to={`/restaurant/${id}/${name}/${foodType}/${img}`}>
+    <Link to={`/restaurant/${id}/${name}/${phone}/${address}/${foodType}/${img}`}>
     <Container
         onClick={onClick}
         id='item'

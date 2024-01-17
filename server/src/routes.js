@@ -7,6 +7,7 @@ const MenuController = require('./controllers/MenuController');
 routes.post('/user', UserController.create)
 routes.put('/user', UserController.update)
 routes.post('/user/login', UserController.findOne)
+routes.post('/user/token', UserController.findOneAsToken)
 
 routes.post('/user/restaurant', RestaurantController.create)
 routes.get('/user/restaurant', RestaurantController.findAll)

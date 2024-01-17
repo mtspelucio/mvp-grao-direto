@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from 'react';
+import axios from 'axios';
 
 export const AuthContext = createContext({})
 
@@ -7,56 +8,47 @@ export const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const userToken = localStorage.getItem('u_tk');
-        const usersStorage = localStorage.getItem('us_db');
 
-        if(userToken && usersStorage) {
-            const hasUser = JSON.parse(usersStorage)?.filter(
-                user => user.email === JSON.parse(userToken).email
-            );
-
-            hasUser && setUser(hasUser[0]);
-        }
-    }, [])
-
-    const signin = (email, password) => {
-        const usersStorage = JSON.parse(localStorage.getItem('us_db'));
-        const hasUser = usersStorage?.filter(user => user.email === email);
-
-        if(hasUser?.length) {
-            if(hasUser[0].email === email && hasUser[0].password === password){
-                const token = Math.random().toString(36).substring(2);
-                localStorage.setItem('u_tk', JSON.stringify({ email, token }));
-                setUser({ email, password });
+        if(userToken) {
+            const { token } = JSON.parse(userToken);
+            
+            axios.post('http://localhost:3001/user/token', { token })
+            .then(res => {
+                localStorage.setItem('u_tk', JSON.stringify(res.data));
+                setUser(res.data)
                 return
-
-            } else {
-                return alert('E-mail ou senha incorretos')
-            } 
-
-        } else {
-            return alert('Usuário não encontrado')
+            })
+            .catch(err => { return alert(err.response.data.message) })
         }
+    }, []);
+
+    const signin = async (email, password) => {
+        await axios.post('http://localhost:3001/user/login', {
+            email,
+            password,
+        })
+        .then(res => {
+            localStorage.setItem('u_tk', JSON.stringify(res.data));
+            setUser(res.data)
+            return
+        })
+        .catch(err => { return alert(err.response.data.message) })
     }
 
-    const signup = (email, password) => {
-        const usersStorage = JSON.parse(localStorage.getItem('us_db'));
-        const hasUser = usersStorage?.filter( user => user.email === email);
+    const signup = async (name, email, password, address) => {
 
-        if(hasUser?.length) {
-            return alert('Este e-mail está vinculado com uma conta');
-        }
-
-        let newUser;
-
-        //increvendo usuario
-        if(usersStorage) {
-            newUser = [...usersStorage, { email, password }]
-        } else {
-            newUser = [{ email, password }];
-        }
-
-        localStorage.setItem('us_db', JSON.stringify(newUser));
-        return
+        await axios.post('http://localhost:3001/user', {
+            name,
+            email,
+            password,
+            address
+        })
+        .then(res => {
+            localStorage.setItem('u_tk', JSON.stringify(res.data));
+            setUser(res.data)
+            return alert('Usuário cadastrado com sucesso!');
+        })
+        .catch(err => { return alert(err.response.data.message) })
     }
 
     const signout = () => {

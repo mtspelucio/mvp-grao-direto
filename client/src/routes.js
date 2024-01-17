@@ -4,10 +4,11 @@ import useAuth from './hook/useAuth';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Restaurant from './pages/Restaurant';
+import Register from './pages/Register';
 
 const PrivateRoute = ({ children }) => {
     const { signed } = useAuth();
-    return signed > 0 ? children : <Login />
+    return signed ? children : <Login />
 }
 
 export default function Routes() {
@@ -24,13 +25,14 @@ export default function Routes() {
                 }
             />
             <Route async 
-                path='/restaurant/:id/:name/:foodDescription/:imgIcon' 
+                path='/restaurant/:id/:name/:phone/:address/:foodDescription/:imgIcon' 
                 element={ 
                     <PrivateRoute>
                         <Restaurant />
                     </PrivateRoute> 
                 }
             />
+            <Route exact path='/register' element={<Register />} />
             <Route path='*' element={<Login />} />
         </Switch>
     </BrowserRouter>

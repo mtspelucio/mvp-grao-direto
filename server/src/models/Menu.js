@@ -5,8 +5,9 @@ class Menu  extends Model {
         super.init({
             name: DataTypes.STRING,
             description: DataTypes.STRING,
-            price: DataTypes.FLOAT,
+            price: DataTypes.STRING,
             image: DataTypes.STRING,
+            food_type: DataTypes.STRING
         }, {
             sequelize
         })
