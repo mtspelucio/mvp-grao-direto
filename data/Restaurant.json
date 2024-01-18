@@ -1,0 +1,41 @@
+[
+	{
+		"id": 1,
+		"name": "Restaurante sem futuro",
+		"food_type": "Comida brasileira",
+		"phone": "3232-2030",
+		"address": "Av Anselmo Alves, 123",
+		"stars": "4,7",
+		"delivery_time": 50,
+		"delivery_price": "4,99",
+		"image": "restaurante-sem-futuro",
+		"createdAt": "2024-01-17T20:52:31.000Z",
+		"updatedAt": "2024-01-17T20:52:31.000Z"
+	},
+	{
+		"id": 2,
+		"name": "Hamburgueria ratão",
+		"food_type": "Hamburguer",
+		"phone": "3131-2024",
+		"address": "Rua das Garças, 321",
+		"stars": "3,9",
+		"delivery_time": 50,
+		"delivery_price": "8,50",
+		"image": "hamburgueria-ratao",
+		"createdAt": "2024-01-17T20:54:44.000Z",
+		"updatedAt": "2024-01-17T20:54:44.000Z"
+	},
+	{
+		"id": 3,
+		"name": "Pizzaria do Zé",
+		"food_type": "Pizza",
+		"phone": "3333-2020",
+		"address": "Rua Pedregulho, 1000",
+		"stars": "4,2",
+		"delivery_time": 40,
+		"delivery_price": "6,00",
+		"image": "pizzaria-do-ze",
+		"createdAt": "2024-01-17T20:56:10.000Z",
+		"updatedAt": "2024-01-17T20:56:10.000Z"
+	}
+]

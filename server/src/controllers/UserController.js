@@ -39,8 +39,10 @@ module.exports = {
             user: null, 
             message: 'Usuário não encontrado'
         })
+
+        const passwordHash = await hash(password, 8);
     
-        user.password = password;
+        user.password = passwordHash;
         await user.save();
         
         res.status(200).json(user)

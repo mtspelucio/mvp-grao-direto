@@ -37,7 +37,7 @@ export default function Navbar({ page, name, address }) {
         <p>Olá! { name }, você está neste endereço</p>
         <span>
           <img src={location} alt='Icone localização' />
-          { address }
+          <span>{ address }</span>
           {/* <img src={arrow} alt='Icone seta' /> */}
         </span>
       </div>

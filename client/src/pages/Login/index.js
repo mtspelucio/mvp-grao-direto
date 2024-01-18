@@ -21,8 +21,10 @@ export default function Login() {
             return
         }
 
-        await signin(email, password);
-        navigate('/home');
+        try {
+            await signin(email, password);
+            navigate('/home');
+        } catch (err) { navigate('/'); }
     }
 
     return (

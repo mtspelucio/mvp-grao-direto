@@ -1,0 +1,167 @@
+[
+	{
+		"id": 1,
+		"title": "Espetinho",
+		"description": "Contra filé, franbacon, linguiça, frango",
+		"price": "4,99",
+		"image": "restaurante-sem-futuro-1",
+		"food_type": "plate",
+		"createdAt": "2024-01-18T12:25:47.000Z",
+		"updatedAt": "2024-01-18T12:25:47.000Z",
+		"restaurant_id": 1
+	},
+	{
+		"id": 2,
+		"title": "Prato feito",
+		"description": "Arroz, feijão, bife bovino acebolado",
+		"price": "14,99",
+		"image": "restaurante-sem-futuro-2",
+		"food_type": "plate",
+		"createdAt": "2024-01-18T14:43:48.000Z",
+		"updatedAt": "2024-01-18T14:43:48.000Z",
+		"restaurant_id": 1
+	},
+	{
+		"id": 3,
+		"title": "Água",
+		"description": "",
+		"price": "1,99",
+		"image": "restaurante-sem-futuro-1",
+		"food_type": "drink",
+		"createdAt": "2024-01-18T14:44:54.000Z",
+		"updatedAt": "2024-01-18T14:44:54.000Z",
+		"restaurant_id": 1
+	},
+	{
+		"id": 4,
+		"title": "Refrigerante",
+		"description": "Coca-cola, sprite, fanta uva e fanta laranja",
+		"price": "7,99",
+		"image": "restaurante-sem-futuro-2",
+		"food_type": "drink",
+		"createdAt": "2024-01-18T14:49:04.000Z",
+		"updatedAt": "2024-01-18T14:49:04.000Z",
+		"restaurant_id": 1
+	},
+    {
+		"id": 5,
+		"title": "X-Burguer",
+		"description": "Pão de hambúrguer, hambúrguer, queijo, alface e tomate",
+		"price": "19,99",
+		"image": "hamburgueria-ratao-1",
+		"food_type": "plate",
+		"createdAt": "2024-01-18T14:50:31.000Z",
+		"updatedAt": "2024-01-18T14:50:31.000Z",
+		"restaurant_id": 2
+	},
+	{
+		"id": 6,
+		"title": "Hambúrguer artesanal",
+		"description": "Pão de hambúrguer, hambúrguer artesanal 180g, queijo cheddar, alface e tomate",
+		"price": "29,99",
+		"image": "hamburgueria-ratao-2",
+		"food_type": "plate",
+		"createdAt": "2024-01-18T14:51:29.000Z",
+		"updatedAt": "2024-01-18T14:51:29.000Z",
+		"restaurant_id": 2
+	},
+	{
+		"id": 7,
+		"title": "Refrigerante",
+		"description": "Coca-cola, sprite, pepse",
+		"price": "6,50",
+		"image": "hamburgueria-ratao-1",
+		"food_type": "drink",
+		"createdAt": "2024-01-18T14:53:09.000Z",
+		"updatedAt": "2024-01-18T14:53:09.000Z",
+		"restaurant_id": 2
+	},
+	{
+		"id": 8,
+		"title": "Suco",
+		"description": "Laranja e laranja com manga ( jarra de 1 litro )",
+		"price": "9,99",
+		"image": "hamburgueria-ratao-2",
+		"food_type": "drink",
+		"createdAt": "2024-01-18T14:54:04.000Z",
+		"updatedAt": "2024-01-18T14:54:04.000Z",
+		"restaurant_id": 2
+	},
+    {
+		"id": 9,
+		"title": "Calabresa",
+		"description": "Massa de pizza, molho de tomate, muçarela, calabresa e azeitona",
+		"price": "39,99",
+		"image": "hamburgueria-ratao-2",
+		"food_type": "pizzaria-do-ze-3",
+		"createdAt": "2024-01-18T14:55:40.000Z",
+		"updatedAt": "2024-01-18T14:55:40.000Z",
+		"restaurant_id": 3
+	},
+	{
+		"id": 10,
+		"title": "Calabresa",
+		"description": "Massa de pizza, molho de tomate, muçarela, calabresa e azeitona",
+		"price": "39,99",
+		"image": "pizzaria-do-ze-3",
+		"food_type": "plate",
+		"createdAt": "2024-01-18T14:56:38.000Z",
+		"updatedAt": "2024-01-18T14:56:38.000Z",
+		"restaurant_id": 3
+	},
+	{
+		"id": 11,
+		"title": "Marguerita",
+		"description": "Massa de pizza, molho de tomate, muçarela de búfala, azeite de oliva e manjericão",
+		"price": "49,99",
+		"image": "pizzaria-do-ze-2",
+		"food_type": "plate",
+		"createdAt": "2024-01-18T14:57:39.000Z",
+		"updatedAt": "2024-01-18T14:57:39.000Z",
+		"restaurant_id": 3
+	},
+	{
+		"id": 12,
+		"title": "Portuguesa",
+		"description": "Massa de pizza, molho de tomate, calabresa, cebola, cebolinha, ovos, queijo e pimentão",
+		"price": "59,99",
+		"image": "pizzaria-do-ze-1",
+		"food_type": "plate",
+		"createdAt": "2024-01-18T14:58:32.000Z",
+		"updatedAt": "2024-01-18T14:58:32.000Z",
+		"restaurant_id": 3
+	},
+	{
+		"id": 13,
+		"title": "Suco",
+		"description": "Laranja e laranja com manga ( jarra de 1 litro )",
+		"price": "11,99",
+		"image": "pizzaria-do-ze-1",
+		"food_type": "drink",
+		"createdAt": "2024-01-18T14:59:36.000Z",
+		"updatedAt": "2024-01-18T14:59:36.000Z",
+		"restaurant_id": 3
+	},
+	{
+		"id": 14,
+		"title": "Água",
+		"description": "",
+		"price": "1,50",
+		"image": "pizzaria-do-ze-2",
+		"food_type": "drink",
+		"createdAt": "2024-01-18T15:00:18.000Z",
+		"updatedAt": "2024-01-18T15:00:18.000Z",
+		"restaurant_id": 3
+	},
+	{
+		"id": 15,
+		"title": "Refrigerante",
+		"description": "Coca-cola, sprite, fanta uva e fanta laranja",
+		"price": "5,50",
+		"image": "pizzaria-do-ze-3",
+		"food_type": "drink",
+		"createdAt": "2024-01-18T15:01:23.000Z",
+		"updatedAt": "2024-01-18T15:01:23.000Z",
+		"restaurant_id": 3
+	}
+]

@@ -54,6 +54,13 @@ export const Container = styled.div`
             padding: 1rem;
             color: var(--gray-200);
             position: relative;
+
+            h3{
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+            }
             
             p{
                 display: -webkit-box;
@@ -81,6 +88,29 @@ export const Container = styled.div`
                         width: 1rem;
                         object-fit: contain;
                     }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 380px) {
+        width: 18rem;
+
+        section{
+            .icon{
+                width: 4rem;
+                height: 4rem;
+
+                img{
+                    width: 2.4rem;
+                }
+            }
+            .details{
+                width: 12rem;
+                padding-left: 0;
+
+                .info{
+                    gap: .4rem;
                 }
             }
         }

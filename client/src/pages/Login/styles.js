@@ -43,6 +43,9 @@ export const Container = styled.div`
                 font-size: 44pt;
                 font-family: 'League Spartan', sans-serif;
             }
+            p:first-child{
+                text-align: end;
+            }
 
             img{
                 width: 8rem;
@@ -120,6 +123,72 @@ export const Container = styled.div`
             a,p{
                 font-size: 10pt;
                 font-weight: 300;
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .content{
+            width: 60%;
+            section{
+                .subtitle, form{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        &:before {
+            height: 100vh;
+        }
+        .content{
+            width: 100%;
+            
+            .banner{
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+    @media (max-width: 560px) {
+        .content{
+            width: 100%;
+            padding: 2rem;
+            
+            .banner{
+                gap: 0;
+                p{
+                    font-size: 34pt;
+                }
+                img{
+                    width: 6rem;
+                }
+            }
+            section{
+                justify-content: start;
+                padding-top: 8rem;
+
+                .subtitle{
+                    width: 100%;
+                    font-size: 22pt;
+                }
+            }
+        }
+    }
+    @media (max-width: 560px) {
+        .content{            
+            .banner{
+                p{
+                    font-size: 28pt;
+                }
+                img{
+                    width: 4rem;
+                }
+            }
+            section{
+                .subtitle{
+                    font-size: 18pt;
+                }
             }
         }
     }

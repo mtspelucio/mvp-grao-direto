@@ -59,4 +59,36 @@ export const Container = styled.div`
             transition: .5s;
         }
     }
+
+    @media (max-width: 550px) {
+        main{
+            padding: 2rem;
+
+            header{
+                .infoRestaurant{
+                    font-size: 12pt;
+                }
+            }
+        }
+    }
+    @media (max-width: 320px) {
+        main{
+            header{
+                flex-direction: column;
+
+                .infoRestaurant{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    p{
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        overflow: hidden;
+                        -webkit-box-orient: vertical;
+                    }
+                }
+            }
+        }
+    }
 `;

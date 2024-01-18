@@ -7,13 +7,20 @@ export const Container = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: .4rem;
+    gap: 2rem;
     color: var(--gray-200);
 
     div{
         display: flex;
         flex-direction: column;
         align-items: end;
+
+        p{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
         span{
             display: flex;
             justify-content: center;
@@ -23,6 +30,13 @@ export const Container = styled.nav`
 
             img{
                 width: 12pt;
+            }
+
+            span{
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
             }
         }
     }
@@ -49,6 +63,17 @@ export const Container = styled.nav`
         img{
             width: 12pt;
             object-fit: cover;
+        }
+    }
+
+    @media (max-width: 425px) {
+        padding: 1rem 2rem;
+    }
+    @media (max-width: 380px) {
+        flex-direction: column;
+
+        div{
+            align-items: center;
         }
     }
 `;

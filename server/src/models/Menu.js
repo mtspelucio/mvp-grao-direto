@@ -3,7 +3,7 @@ const { Model, DataTypes } = require('sequelize');
 class Menu  extends Model {
     static init (sequelize){
         super.init({
-            name: DataTypes.STRING,
+            title: DataTypes.STRING,
             description: DataTypes.STRING,
             price: DataTypes.STRING,
             image: DataTypes.STRING,

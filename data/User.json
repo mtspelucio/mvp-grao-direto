@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Fred",
+        "email": "fred@graodireto.com.br",
+        "password": "123Fred",
+        "address": "Av Anselmo Alves, 123",
+        "token": "TOKEN ALEATÓRIO ALFANUMERICO",
+        "createdAt": "2024-01-17T20:54:44.000Z",
+		"updatedAt": "2024-01-17T20:54:44.000Z"
+    },
+    {
+        "id": 1,
+        "name": "Maria",
+        "email": "maria@gmail.com",
+        "password": "123Maria",
+        "address": "Rua Pedro Alves, 100",
+        "token": "TOKEN ALEATÓRIO ALFANUMERICO",
+        "createdAt": "2024-01-17T20:54:44.000Z",
+		"updatedAt": "2024-01-17T20:54:44.000Z"
+    }
+]

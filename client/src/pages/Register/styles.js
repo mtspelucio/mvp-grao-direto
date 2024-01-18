@@ -25,7 +25,7 @@ export const Container = styled.div`
     
     .content{
         display: flex;
-        align-items: center;
+        /* align-items: center; */
         justify-content: center;
         flex-direction: column;
         gap: 3rem;
@@ -33,10 +33,11 @@ export const Container = styled.div`
         width: 50%;
         height: 100vh;
         color: var(--white);
+        padding: 4rem;
 
         .banner{
             display: flex;
-            width: 50%;
+            width: 100%;
             align-items: center;
             justify-content: center;
             gap: 2rem;
@@ -45,6 +46,9 @@ export const Container = styled.div`
             p{
                 font-size: 44pt;
                 font-family: 'League Spartan', sans-serif;
+            }
+            p:first-child{
+                text-align: end;
             }
 
             img{
@@ -58,10 +62,10 @@ export const Container = styled.div`
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            padding-left: 3rem;
 
             form{
-                width: 65%;
+                width: 80%;
                 display: flex;
                 flex-direction: column;
                 gap: 1.2rem;
@@ -111,6 +115,48 @@ export const Container = styled.div`
                 font-size: 10pt;
                 font-weight: 300;
             }
+        }
+    }
+    @media (max-width: 1150px) {
+        .content{
+            .banner{
+                gap: 1rem;
+                p{
+                    font-size: 36pt;
+                }
+                img{
+                    width: 6rem;
+                }
+            }
+            section{
+                padding: 0 1rem;
+                form{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .content{
+            width: 70%;
+            padding: 2rem;
+            .banner{
+                gap: 0;
+                p{
+                    font-size: 32pt;
+                }
+                img{
+                    width: 4rem;
+                }
+            }
+            section{
+                padding: 0;
+            }
+        }
+    }
+    @media (max-width: 425px) {
+        .content{
+            width: 100%;
         }
     }
 `;

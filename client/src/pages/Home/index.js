@@ -13,12 +13,12 @@ export default function Home() {
     const user = JSON.parse(localStorage.getItem('u_tk'));
 
     useEffect(() => {
-        const cardsRestaurant = document.querySelectorAll('.restaurants .cardRestaurant');
-        setCards(cardsRestaurant);
-
         axios.get('http://localhost:3001/user/restaurant')
         .then(res => { setRestaurants(res.data) })
         .catch(err => { console.log(err.response.data.message) })
+        
+        const cardsRestaurant = document.querySelectorAll('.restaurants .cardRestaurant');
+        setCards(cardsRestaurant);
     }, [])
     
     function filterCards(text) {
@@ -61,20 +61,22 @@ export default function Home() {
                 <section className='restaurants'>
                     
                     {
-                        restaurant.map((element, index) => (
-                            <CardRestaurant 
-                                key={index}
-                                id={element.id}
-                                name={element.name} 
-                                phone={element.phone}
-                                address={element.address}
-                                foodType={element.food_type} 
-                                img={element.image}
-                                time={element.delivery_time}
-                                stars={element.stars}
-                                deliveryPrice={element.delivery_price}
-                            />
-                        ))
+                        restaurant && (
+                            restaurant.map((element, index) => (
+                                <CardRestaurant 
+                                    key={index}
+                                    id={element.id}
+                                    name={element.name} 
+                                    phone={element.phone}
+                                    address={element.address}
+                                    foodType={element.food_type} 
+                                    img={element.image}
+                                    time={element.delivery_time}
+                                    stars={element.stars}
+                                    deliveryPrice={element.delivery_price}
+                                />
+                            ))
+                        )
                     }
                 </section>
             </main>
