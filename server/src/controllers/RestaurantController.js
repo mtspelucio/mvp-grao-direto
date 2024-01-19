@@ -13,7 +13,7 @@ module.exports = {
             image
         } = req.body;
         
-        // if (Restaurant.findOne({ where: { name } })) return res.status(400).json({user: null, message: 'Restaurante já existe'});
+        if (Restaurant.findOne({ where: { name } })) return res.status(400).json({user: null, message: 'Restaurante já existe'});
         const restaurant = await Restaurant.create({ 
             name, 
             food_type, 
