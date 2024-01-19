@@ -10,9 +10,11 @@ Para iniciar o back-end:
 - Baixe a pasta ou faça um "git clone".
 - No diretório raiz do projeto, execute:
 
-- cd server
-- npm install
-- npm start
+```
+cd server
+npm install
+npm start
+```
 
 O servidor encontra-se na pasta "server". O arquivo de rotas da API está em "src/routes.js", e os testes de integração em "routes.jest.js". Os controllers da API estão localizados em "src/controller".
 
@@ -21,8 +23,10 @@ O servidor encontra-se na pasta "server". O arquivo de rotas da API está em "sr
 A pasta "client" contém o front-end. Para iniciar o projeto:
 - No diretório "client", execute:
 
-- npm install
-- npm start
+```
+npm install
+npm start
+```
 
 ## 4. Banco de Dados
 
