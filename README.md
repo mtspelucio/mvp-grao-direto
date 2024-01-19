@@ -21,9 +21,10 @@ O servidor encontra-se na pasta "server". O arquivo de rotas da API está em "sr
 ## 3. Front-end
 
 A pasta "client" contém o front-end. Para iniciar o projeto:
-- No diretório "client", execute:
+- No diretório raiz do projeto, execute:
 
 ```
+cd client
 npm install
 npm start
 ```
