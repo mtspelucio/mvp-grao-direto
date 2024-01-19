@@ -1,6 +1,6 @@
 # Projeto MVP
 
-## 1. Banco de Dados
+## 1. Modelos de Dados
 
 As informações das tabelas do banco de dados estão localizadas na pasta "data", em um arquivo .json.
 
