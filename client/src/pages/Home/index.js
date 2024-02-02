@@ -13,12 +13,14 @@ export default function Home() {
     const user = JSON.parse(localStorage.getItem('u_tk'));
 
     useEffect(() => {
+        const cardsRestaurant = document.querySelectorAll('.restaurants .cardRestaurant');
+        setCards(cardsRestaurant);
+    }, [restaurant])
+
+    useEffect(() => {
         axios.get('http://localhost:3001/user/restaurant')
         .then(res => { setRestaurants(res.data) })
         .catch(err => { console.log(err.response.data.message) })
-        
-        const cardsRestaurant = document.querySelectorAll('.restaurants .cardRestaurant');
-        setCards(cardsRestaurant);
     }, [])
     
     function filterCards(text) {
