@@ -145,7 +145,7 @@ describe('Create User Controller', () => {
             stars: '4,9', 
             delivery_time: 10, 
             delivery_price: '0,00',
-            image: 'teste-de-integracao'
+            image: 'restaurante-sem-futuro'
         })
 
         expect(response.status).toBe(201);
@@ -163,7 +163,7 @@ describe('Create User Controller', () => {
             stars: '4,9', 
             delivery_time: 10, 
             delivery_price: '0,00',
-            image: 'teste-de-integracao'
+            image: 'restaurante-sem-futuro'
         })
         
         const response = await request(app)
@@ -176,7 +176,7 @@ describe('Create User Controller', () => {
             stars: '4,9', 
             delivery_time: 10, 
             delivery_price: '0,00',
-            image: 'teste-de-integracao'
+            image: 'restaurante-sem-futuro'
         })
 
         expect(response.status).toBe(400);
@@ -194,7 +194,7 @@ describe('Create User Controller', () => {
             stars: '4,9', 
             delivery_time: 10, 
             delivery_price: '0,00',
-            image: 'teste-de-integracao'
+            image: 'restaurante-sem-futuro'
         })
         
         const response = await request(app)
